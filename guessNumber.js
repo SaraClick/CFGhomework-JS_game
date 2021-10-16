@@ -16,6 +16,7 @@ var randomNum = possibleNum[Math.floor(Math.random() * possibleNum.length) + 1];
 //console.log(randomNum);
 var name = prompt("Welcome! My name is Sara, what's your name? : ");
 var wannaPlay = prompt(`Nice to meet you ${name} :) This is my first JavaScript coding and I thought it would be great to playa game. Do you want to play? Respond Y/N : `);
+//CASE 1: the user wants to play
 if (wannaPlay.toUpperCase() === "Y") {
     //Print the rules of the game and ask for the first guess
     console.log(rules);
@@ -46,8 +47,10 @@ if (wannaPlay.toUpperCase() === "Y") {
         }
     }
 
+    //CASE 2: the used does not want to play
 } else if (wannaPlay.toUpperCase() === "N") {
     console.log(noPlay);
+    //CASE 3: the user enters something else than Y or N
 } else {
     console.log("You have not entered a valid response. Please only type YES or NO.");
     wannaPlay;
